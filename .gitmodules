@@ -1,0 +1,6 @@
+[submodule "workspaces/SimpleZoom"]
+	url = https://github.com/UnRealDinnerbone/SimpleZoom-Fabric
+[submodule "workspaces/TrampleStopper"]
+	url = https://github.com/UnRealDinnerbone/TrampleStopper-Fabric
+[submodule "workspaces/LeatherCows"]
+	url = https://github.com/UnRealDinnerbone/LeatherCows-Fabric

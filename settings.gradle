@@ -1,0 +1,34 @@
+rootProject.name = 'FabricMods'
+
+File workspacesDir = new File("workspaces")
+if(workspacesDir.exists()) {
+    def projects = workspacesDir.listFiles(new FileFilter() {
+        boolean accept(File file) {
+            if (file.isDirectory()) {
+                File buildGradle = new File(file, 'build.gradle')
+                if(buildGradle.exists()) {
+                    if(buildGradle.isFile()) {
+                        return true
+                    }else {
+                        println("Your build.gralde is not a file? (WHAT?)")
+                    }
+                }else {
+                    println("Found Dir " + file.name + "it workspaces with out build.gradle it will NOT be loaded as a project")
+                }
+            }
+            return false
+        }
+    })
+
+    println("Loading Projects...")
+
+    projects.each { File dir ->
+        println("Loading Project: " + dir.name)
+        include dir.name
+        project(":" + dir.name).projectDir = file(dir.path)
+    }
+
+    println("Loaded Projects")
+} else {
+    println("Can't loads any projects folder \'workspaces\' does not exist")
+}

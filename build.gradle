@@ -1,0 +1,19 @@
+apply plugin: 'base' // To add "clean" task to the root project.
+
+subprojects {
+    apply from: rootProject.file('common.gradle')
+}
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+task settings {
+    project.ext.devWorkspace = true
+    project.ext.minecraftVersion = project.property("minecraft_version")
+    project.ext.mappingsVersion = project.property("mappings_version")
+    project.ext.loaderVersion = project.property("loader_version")
+    project.ext.fabricVversion = project.property("fabric_version")
+}
+
+subprojects.each { subproject -> evaluationDependsOn(subproject.path) }

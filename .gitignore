@@ -1,0 +1,20 @@
+# Ignore All Files
+/*
+# Included Folders
+!/src
+!/workspaces
+/workspaces/MC/build
+/workspaces/MC/.gradle
+
+# Included Files
+!.gitmodules
+!.gitignore
+!build.gradle
+!LICENSE.md
+!README.md
+!gradlew.bat
+!gradlew
+!common.gradle
+!configuration.gradle
+!settings.gradle
+
