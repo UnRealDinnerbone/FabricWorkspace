@@ -4,3 +4,5 @@
 	url = https://github.com/UnRealDinnerbone/TrampleStopper-Fabric
 [submodule "workspaces/LeatherCows"]
 	url = https://github.com/UnRealDinnerbone/LeatherCows-Fabric
+[submodule "workspaces/ReloadAnnouncer"]
+	url = https://github.com/UnRealDinnerbone/ReloadAnnouncer-Fabric

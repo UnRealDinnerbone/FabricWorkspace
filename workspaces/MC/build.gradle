@@ -21,6 +21,7 @@ repositories {
     }
 }
 
+
 dependencies {
     if(project.hasProperty("devWorkspace")) {
         minecraft "com.mojang:minecraft:" + project.property("minecraftVersion")
