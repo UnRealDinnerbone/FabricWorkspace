@@ -9,6 +9,8 @@
 # Included Files
 !.gitmodules
 !.gitignore
+!gradle
+!gradle.properties
 !build.gradle
 !LICENSE.md
 !README.md
