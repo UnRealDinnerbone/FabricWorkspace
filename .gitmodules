@@ -6,3 +6,5 @@
 	url = https://github.com/UnRealDinnerbone/LeatherCows-Fabric
 [submodule "workspaces/ReloadAnnouncer"]
 	url = https://github.com/UnRealDinnerbone/ReloadAnnouncer-Fabric
+[submodule "workspaces/SimpleFireworks"]
+	url = https://github.com/UnRealDinnerbone/SimpleFireworks-Fabric
