@@ -8,3 +8,5 @@
 	url = https://github.com/UnRealDinnerbone/ReloadAnnouncer-Fabric
 [submodule "workspaces/SimpleFireworks"]
 	url = https://github.com/UnRealDinnerbone/SimpleFireworks-Fabric
+[submodule "workspaces/Cookies"]
+	url = https://github.com/manmaed/Cookies
