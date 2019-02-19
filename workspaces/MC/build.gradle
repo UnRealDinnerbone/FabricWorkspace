@@ -23,17 +23,9 @@ repositories {
 
 
 dependencies {
-    if(project.hasProperty("devWorkspace")) {
-        minecraft "com.mojang:minecraft:" + project.property("minecraftVersion")
-        println(project.property("mappingsVersion") + " ASD")
-        mappings "net.fabricmc:yarn:" + project.property("mappingsVersion")
-        modCompile "net.fabricmc:fabric-loader:" + project.property("loaderVersion")
-        modCompile "net.fabricmc:fabric:" + project.property("fabricVversion")
-    }else {
-        minecraft "com.mojang:minecraft:" + "${minecraft_version}"
-        mappings "net.fabricmc:yarn:"  + "${mappings_version}"
-        modCompile "net.fabricmc:fabric-loader:"  + "${loader_version}"
-        modCompile "net.fabricmc:fabric:"  + "${fabric_version}"
-    }
-    rootProject.subprojects.each { p -> compile project(":" + p.getName())}
+    minecraft "com.mojang:minecraft:" + "${minecraft_version}"
+    mappings "net.fabricmc:yarn:" + "${mappings_version}"
+    modCompile "net.fabricmc:fabric-loader:" + "${loader_version}"
+    modCompile "net.fabricmc:fabric:" + "${fabric_version}"
+    rootProject.subprojects.each { p -> compile project(":" + p.getName()) }
 }
