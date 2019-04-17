@@ -7,7 +7,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath "net.fabricmc:fabric-loom:0.2.0-SNAPSHOT"
+        classpath "net.fabricmc:fabric-loom:0.2.1-SNAPSHOT"
     }
 }
 
@@ -19,6 +19,11 @@ repositories {
         name = "Modmuss50"
         url = "http://maven.modmuss50.me/"
     }
+    maven {
+        name = "Cotton"
+        url = "http://server.bbkr.space:8081/artifactory/libs-snapshot"
+    }
+    mavenCentral()
 }
 
 
@@ -27,5 +32,6 @@ dependencies {
     mappings "net.fabricmc:yarn:" + "${mappings_version}"
     modCompile "net.fabricmc:fabric-loader:" + "${loader_version}"
     modCompile "net.fabricmc:fabric:" + "${fabric_version}"
+    modCompile "io.github.prospector.modmenu:ModMenu:1.3.5-67"
     rootProject.subprojects.each { p -> compile project(":" + p.getName()) }
 }
