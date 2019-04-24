@@ -23,6 +23,10 @@ repositories {
         name = "Cotton"
         url = "http://server.bbkr.space:8081/artifactory/libs-snapshot"
     }
+    maven {
+        name = "CurseForge"
+        url = "https://minecraft.curseforge.com/api/maven/"
+    }
     mavenCentral()
 }
 
@@ -33,5 +37,8 @@ dependencies {
     modCompile "net.fabricmc:fabric-loader:" + "${loader_version}"
     modCompile "net.fabricmc:fabric:" + "${fabric_version}"
     modCompile "io.github.prospector.modmenu:ModMenu:1.3.5-67"
+    modCompile "roughly-enough-items:RoughlyEnoughItems:2.7.7.91"
+    modCompile "cloth-config:ClothConfig:0.1.3.7"
+    modCompile  "cloth:ClothEvents:0.3.1.23"
     rootProject.subprojects.each { p -> compile project(":" + p.getName()) }
 }
