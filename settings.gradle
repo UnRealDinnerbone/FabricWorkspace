@@ -1,4 +1,4 @@
-rootProject.name = 'FabricMods'
+rootProject.name = 'FabricMods-Snapshot'
 
 File workspacesDir = new File("workspaces")
 if(workspacesDir.exists()) {
@@ -7,7 +7,7 @@ if(workspacesDir.exists()) {
             if (file.isDirectory()) {
                 File buildGradle = new File(file, 'build.gradle')
                 if(buildGradle.exists()) {
-                    if(buildGradle.isFile()) {
+                    if(buildGradle.isFile()) {6
                         return true
                     }else {
                         println("Your build.gralde is not a file? (WHAT?)")

@@ -10,6 +10,7 @@
 !.gitmodules
 !.gitignore
 !gradle
+!Jenkinsfile
 !gradle.properties
 !build.gradle
 !LICENSE.md
