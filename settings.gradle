@@ -1,4 +1,4 @@
-rootProject.name = 'FabricMods-Snapshot'
+rootProject.name = 'Fabric-1.16'
 
 File workspacesDir = new File("workspaces")
 if(workspacesDir.exists()) {
@@ -7,7 +7,7 @@ if(workspacesDir.exists()) {
             if (file.isDirectory()) {
                 File buildGradle = new File(file, 'build.gradle')
                 if(buildGradle.exists()) {
-                    if(buildGradle.isFile()) {6
+                    if(buildGradle.isFile()) {
                         return true
                     }else {
                         println("Your build.gralde is not a file? (WHAT?)")
@@ -27,7 +27,6 @@ if(workspacesDir.exists()) {
         include dir.name
         project(":" + dir.name).projectDir = file(dir.path)
     }
-
     println("Loaded Projects")
 } else {
     println("Can't loads any projects folder \'workspaces\' does not exist")
